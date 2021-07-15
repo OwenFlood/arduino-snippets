@@ -29,7 +29,18 @@
         "language": "cpp",
         "path": "./snippets/arduino-snippets.ts"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Arduino Snippets Plus",
+      "properties": {
+        "arduino-snippets-plus.same-line-curlies": {
+          "type": "bool",
+          "default": false,
+          "description": "Places curly brackets on the same line rather than the next line"
+        }
+      }
+    }
   },
   "devDependencies": {
     "@types/vscode": "^1.58.0",
