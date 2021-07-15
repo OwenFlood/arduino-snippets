@@ -2,7 +2,7 @@
   "name": "arduino-snippets-plus",
   "displayName": "arduino-snippets-plus",
   "description": "Code snippets for arduino",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/OwenFlood/arduino-snippets"
