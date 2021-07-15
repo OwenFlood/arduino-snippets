@@ -12,7 +12,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./"
   },
-  "publisher": "owenflood",
+  "publisher": "owen-flood",
   "engines": {
     "vscode": "^1.58.0"
   },
