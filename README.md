@@ -11,7 +11,13 @@ Adds arduino snippets for both `*.ino` files and `cpp` language. So, if you didn
 
 ## Usage
 
-Type part of a snippet, press `enter`, and the snippet unfolds.
+Type part of a snippet, press `tab` or `enter` to autofill the rest.
+
+### Configurations
+
+| Configuration Name                        | Type      | Description    |
+| ----------------------------------------- | ----------| ---------------|
+| `arduino-snippets-plus.same-line-curlies` | `Bool`    | Places curly brackets on the same line rather than the next line |
 
 ### Snippets
 
@@ -150,3 +156,8 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 | `cos`                | [cos()](https://www.arduino.cc/reference/en/language/functions/trigonometry/cos/)                  |
 | `sin`                | [sin()](https://www.arduino.cc/reference/en/language/functions/trigonometry/sin/)                  |
 | `tan`                | [tan()](https://www.arduino.cc/reference/en/language/functions/trigonometry/tan/)                  |
+
+
+### Contributions
+
+If you want any additional configurations or features feel free to either open an issue or pull request

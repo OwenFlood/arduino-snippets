@@ -35,8 +35,8 @@
       "title": "Arduino Snippets Plus",
       "properties": {
         "arduino-snippets-plus.same-line-curlies": {
-          "type": "bool",
-          "default": false,
+          "type": "boolean",
+          "default": true,
           "description": "Places curly brackets on the same line rather than the next line"
         }
       }
