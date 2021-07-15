@@ -29,8 +29,13 @@ function activate(context) {
     context.subscriptions.push(vscode.languages.registerCompletionItemProvider("cpp", {
         provideCompletionItems(doc, pos, token, context) {
             let sameLineCurly = vscode.workspace.getConfiguration("arduino-snippets-plus").get("same-line-curlies");
+            const string = doc.getText(new vscode.Range(new vscode.Position(0, 0), new vscode.Position(pos.line, pos.character)));
+            const isInQuote = !!((string.split('"').length - string.split('\\"').length) % 2);
+            if (isInQuote) {
+                return [];
+            }
             return snippets_json_1.default.map(({ prefix, body, description }) => {
-                if (sameLineCurly && ~body.indexOf("\n{")) { // Searches body for presence of newline before curly
+                if (sameLineCurly && ~body.indexOf("\n{")) {
                     body = body.replace(/\n{/g, ' {');
                 }
                 return {

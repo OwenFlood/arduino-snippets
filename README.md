@@ -160,4 +160,4 @@ Type part of a snippet, press `tab` or `enter` to autofill the rest.
 
 ### Contributions
 
-If you want any additional configurations or features feel free to either open an issue or pull request
+If you want any additional configurations or features feel free to either [open an issue](https://github.com/OwenFlood/arduino-snippets/issues) or [pull request](https://github.com/OwenFlood/arduino-snippets/pulls)
