@@ -1,6 +1,9 @@
 # Arduino Snippets Plus for VS Code
 
 This extension is a fork from [arduino-snippets](https://github.com/ronaldosena/arduino-snippets) and adds further configuration options.
+
+-------------------
+
 It is for Visual Studio Code and adds snippets for Arduino programming.
 Adds arduino snippets for both `*.ino` files and `cpp` language. So, if you didn't install [Microsoft's Arduino extension](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino), the snippets would still work.
 

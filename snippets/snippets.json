@@ -19,11 +19,6 @@
     "description": "Builds the body of an arduino program.",
     "prefix": "arduino"
   },
-  "attachInterrupt": {
-    "body": "attachInterrupt(${1:interrupt}, ${2:function}, ${3:mode});$0",
-    "description": "Digital Pins With Interrupts.",
-    "prefix": "attachInterrupt"
-  },
   "byte": {
     "body": "byte(${1:x});$0",
     "description": "Converts a value to the byte data type.",
@@ -85,7 +80,7 @@
     "prefix": "for"
   },
   "if": {
-    "body": "if(${1}){\n    ${2}\n}$0",
+    "body": "if (${1}) {\n${2}\n}$0",
     "description": "The if statement checks for a condition and executes the proceeding statement or set of statements if the condition is 'true'.",
     "prefix": "if"
   },
@@ -101,12 +96,7 @@
     "prefix": "ifndef"
   },
   "include": {
-    "body": "include \"${1:lib.h}\"$0",
-    "description": "Arduino(C++) include userlib",
-    "prefix": "include"
-  },
-  "include": {
-    "body": "include <${1:lib.h}>$0",
+    "body": "#include <${1:lib.h}>$0",
     "description": "#include is used to include outside libraries in your sketch.",
     "prefix": "include"
   },
@@ -144,11 +134,6 @@
     "body": "micros();$0",
     "description": "Returns the number of microseconds since the Arduino board began running the current program.",
     "prefix": "micros"
-  },
-  "if": {
-    "body": "if ${1:constant-expression}$0",
-    "description": "The if statement checks for a condition and executes the proceeding statement or set of statements if the condition is 'true'.",
-    "prefix": "if"
   },
   "millis": {
     "body": "millis();$0",
