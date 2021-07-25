@@ -25,19 +25,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = void 0;
 const vscode = __importStar(require("vscode"));
 const snippets_json_1 = __importDefault(require("./snippets.json"));
+const filters_1 = require("./filters");
 function activate(context) {
     context.subscriptions.push(vscode.languages.registerCompletionItemProvider("cpp", {
         provideCompletionItems(doc, pos, token, context) {
-            let sameLineCurly = vscode.workspace.getConfiguration("arduino-snippets-plus").get("same-line-curlies");
-            const string = doc.getText(new vscode.Range(new vscode.Position(0, 0), new vscode.Position(pos.line, pos.character)));
-            const isInQuote = !!((string.split('"').length - string.split('\\"').length) % 2);
-            if (isInQuote) {
+            if (filters_1.IsInQuote(doc, pos)) {
                 return [];
             }
             return snippets_json_1.default.map(({ prefix, body, description }) => {
-                if (sameLineCurly && ~body.indexOf("\n{")) {
-                    body = body.replace(/\n{/g, ' {');
-                }
+                body = filters_1.SameLineCurly(body);
                 return {
                     label: prefix,
                     insertText: new vscode.SnippetString(body),
